@@ -5,7 +5,7 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 
 # ====== KONFIGURASI TCP ======
-CAM_IP, CAM_PORT = "172.15.1.119", 2000
+CAM_IP, CAM_PORT = "192.168.2.119", 2000
 TIMEOUT = 2
 
 # ====== RAW FRAME 20-byte (persis dari manual) ======
@@ -31,8 +31,8 @@ RAW = {
 
     "picrec":        bytes.fromhex("55 AA DC 11 30 0F 00 00 00 00 00 00 00 00 06 10 00 00 00 38"),
     "take_pic":      bytes.fromhex("55 AA DC 11 30 0F 00 00 00 00 00 00 00 00 04 D0 00 00 00 FA"),
-    "start_rec":     bytes.fromhex("55 AA DC 11 30 0F 00 00 00 00 00 00 00 00 05 10 00 00 00 3B"),
-    "stop_rec":      bytes.fromhex("55 AA DC 11 30 0F 00 00 00 00 00 00 00 00 05 50 00 00 00 7B"),
+    "start_rec":     bytes.fromhex("55 AA DC 05 1C 05 00 1C"),
+    "stop_rec":      bytes.fromhex("55 AA DC 05 1C 05 40 5C"),
 
     "ir_dzoom_plus":  bytes.fromhex("55 AA DC 11 30 0F 00 00 00 00 00 00 00 00 06 D0 00 00 00 F8"),
     "ir_dzoom_minus": bytes.fromhex("55 AA DC 11 30 0F 00 00 00 00 00 00 00 00 07 10 00 00 00 39"),
